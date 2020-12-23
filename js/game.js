@@ -40,6 +40,8 @@ class Game{
                 form.hide();
 
                 Player.getPlayerInfo();
+                if(allPlayers!==undefined){
+                    
                  image(back_img, 0, 0, 1000, 800);
                  var x =100;
                  var y=200;
@@ -64,12 +66,10 @@ class Game{
                          
                      }
                     
-                     text("Player1 : "+allPlayers.player1.score,50,50);
-                     text("Player2 : "+allPlayers.player2.score,50,100);
-                     
                  }
                 
-                
+                 text("Player1 : "+allPlayers.player1.score,50,50);
+                 text("Player2 : "+allPlayers.player2.score,50,100);                
                  
 
                 if (keyIsDown(RIGHT_ARROW) && player.index !== null) {
@@ -114,14 +114,7 @@ class Game{
                          }
                      }
                   }
-                  
-                
-
-         
-         
-        
-         
-
+                }
     }
 
     end(){
